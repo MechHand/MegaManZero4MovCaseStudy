@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1pj5scgunenp"]
+
+[ext_resource type="Texture2D" uid="uid://5f7wwqyl8ehh" path="res://Nodes/Terrain/Tilemap.png" id="1_jmv5o"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cdjhp"]
+texture = ExtResource("1_jmv5o")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 0, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 0, -8, -8, -8, 8, 8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, -8, 8, 8, 8)
+
+[sub_resource type="TileSet" id="TileSet_vjply"]
+physics_layer_0/collision_layer = 3
+sources/0 = SubResource("TileSetAtlasSource_cdjhp")
+
+[node name="Terrain" type="TileMap"]
+tile_set = SubResource("TileSet_vjply")
+format = 2
